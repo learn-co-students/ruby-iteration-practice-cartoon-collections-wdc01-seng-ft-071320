@@ -15,13 +15,15 @@ def summon_captain_planet(array)# code an argument here
   planeteer_calls = array.map do |element|
   element.capitalize + "!"
   end
-  print planeteer_calls
+  planeteer_calls
 end
 summon_captain_planet(["earth", "wind", "fire", "water", "heart"])
 
 def long_planeteer_calls(array)# code an argument here
   # Your code here
-puts array.any? {|element| element.length > 4 }
+array.any? do |element| #{|element| element.length > 4 }
+ element.length > 4
+end
 end
 long_planeteer_calls(["two", "go", "industrious", "bop"])
 
